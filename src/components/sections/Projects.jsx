@@ -30,7 +30,7 @@ export const Projects = () => {
             <source src="/Cassandra.mp4" type="video/mp4"/>
         </video>
         <video className={`absolute h-full w-full  ml-50 ${selectedGame == 2? "opacity-100":"opacity-0"} transition-all duration-200`} muted autoPlay loop>
-            <source src="/Fail-Safe.mp4" type="video/mp4"/>
+            <source src="/Fail_Safe.mp4" type="video/mp4"/>
         </video>
          <video className={`absolute h-full w-full  ml-50 ${selectedGame == 3? "opacity-100":"opacity-0"} transition-all duration-200`} muted autoPlay loop>
             <source src="/OWL.mp4" type="video/mp4"/>
