@@ -4,43 +4,40 @@ export const Projects = () => {
 
     const [selectedGame, setSelectedGame] = useState(0);
 
-    const [selectedVideo, setSelectedVideo] = useState('white');
 
-    useEffect(() => {
-            switch(selectedGame)
-            {
-                case 0:
-                    setSelectedVideo("");
-                    break;
-                case 1:
-                    setSelectedVideo("");
-                    break;
-                case 2: 
-                    setSelectedVideo("");
-                    break;
-            }
-    }, [selectedGame])
-
-    return <section id="project" className="min-h-screen flex  py-20">
+    return <section id="project" className="min-h-screen flex py-20">
         
         <video className={`absolute h-full w-full  ml-50 ${selectedGame == 0? "opacity-100":"opacity-0"} transition-all duration-200`} muted autoPlay loop>
-            <source src="/Whimsical.mp4" type="video/mp4"/>
+            <source src="./Whimsical.mp4" type="video/mp4"/>
         </video>
         <video className={`absolute h-full w-full  ml-50 ${selectedGame == 1? "opacity-100":"opacity-0"} transition-all duration-200`} muted autoPlay loop>
-            <source src="/Cassandra.mp4" type="video/mp4"/>
+            <source src="./Cassandra.mp4" type="video/mp4"/>
         </video>
         <video className={`absolute h-full w-full  ml-50 ${selectedGame == 2? "opacity-100":"opacity-0"} transition-all duration-200`} muted autoPlay loop>
-            <source src="/Fail_Safe.mp4" type="video/mp4"/>
+            <source src="./Fail_Safe.mp4" type="video/mp4"/>
         </video>
          <video className={`absolute h-full w-full  ml-50 ${selectedGame == 3? "opacity-100":"opacity-0"} transition-all duration-200`} muted autoPlay loop>
-            <source src="/OWL.mp4" type="video/mp4"/>
+            <source src="./OWL.mp4" type="video/mp4"/>
         </video>
          <video className={`absolute h-full w-full  ml-50 ${selectedGame == 4? "opacity-100":"opacity-0"} transition-all duration-200`} muted autoPlay loop>
-            <source src="/Convergence.mp4" type="video/mp4"/>
+            <source src="./Convergence.mp4" type="video/mp4"/>
         </video>
-        <div className={`absolute min-h-screen min-w-screen ${selectedVideo} pointer-events-none`}>{selectedVideo}</div>
-        <div className="absolute min-h-screen min-w-screen bg-linear-to-tr from-[rgba(0,0,0,1)] from-25% to-[0,0,0,0] to-50%"></div>
-        <div className="absolute min-h-screen min-w-screen bg-linear-to-r from-[rgba(0,0,0,1)] from-25% to-[0,0,0,0] to-50%"></div>
+        
+        <div className="absolute min-h-screen min-w-screen bg-linear-to-tl from-[rgba(0,0,0,0.7)] from-25% to-[0,0,0,0] to-35%"></div>
+        <div className="absolute min-h-screen min-w-screen bg-linear-to-r from-[rgba(0,0,0,1)] from-25% to-[0,0,0,0] to-30%"></div>
+
+        <div className="absolute  self-end right-10 justify-self-center">
+            <img src={`
+                ${
+                    selectedGame == 0? './WhimsicalLogo.png':
+                    selectedGame == 1? './CassandraLogo.png':
+                    selectedGame == 2? './FailSafeLogo.png':
+                    selectedGame == 3? './OWLLogo.png':
+                    selectedGame == 4? './ConvergenceLogo.png': ''
+                }
+                `}
+                className="max-w-120 max-h-50"></img>
+        </div>
 
         <div className="z-10 p-20 py-30">
             <div className="text-4xl font-bold mb-16 text-start">
@@ -55,7 +52,7 @@ export const Projects = () => {
                         <h3 className="text-md font-bold">
                             Whimsical Artefacts
                         </h3>
-                        <div className="bg-white w-7 h-7 "> </div>
+                        <img src="./Unity.svg" className="w-7 h-7"></img>
                     </div>
                     
                     <div className={`${selectedGame == 0? "opacity-100 h-20": "opacity-0 h-0"} transition-all duration-200`}>
@@ -78,9 +75,8 @@ export const Projects = () => {
                         <h3 className="text-md font-bold">
                             Cassandra Flame of Faith
                         </h3>
-                        <div className="bg-white w-7 h-7 "> </div>
+                        <img src="./Unity.svg" className="w-7 h-7"></img>
                     </div>
-                    
                     <div className={`${selectedGame == 1? "opacity-100 h-20": "opacity-0 h-0"} transition-all duration-200`}>
                         <p className="text-sm text-gray-400 mb-4 w-65">
                             Multiplayer friend-slop game with proximity vc and drawing system
@@ -101,7 +97,7 @@ export const Projects = () => {
                         <h3 className="text-md font-bold">
                             Fail-Safe
                         </h3>
-                        <div className="bg-white w-7 h-7 "> </div>
+                        <img src="./Unreal.svg" className="w-7 h-7"></img>
                     </div>
                     
                     <div className={`${selectedGame == 2? "opacity-100 h-20": "opacity-0 h-0"} transition-all duration-200`}>
@@ -124,7 +120,7 @@ export const Projects = () => {
                         <h3 className="text-md font-bold">
                             O.W.L.
                         </h3>
-                        <div className="bg-white w-7 h-7 "> </div>
+                        <img src="./Unreal.svg" className="w-7 h-7"></img>
                     </div>
                     
                     <div className={`${selectedGame == 3? "opacity-100 h-20": "opacity-0 h-0"} transition-all duration-200`}>
@@ -146,7 +142,7 @@ export const Projects = () => {
                         <h3 className="text-md font-bold">
                             Convergence
                         </h3>
-                        <div className="bg-white w-7 h-7 "> </div>
+                        <img src="./Unreal.svg" className="w-7 h-7"></img>
                     </div>
                     
                     <div className={`${selectedGame == 4? "opacity-100 h-20": "opacity-0 h-0"} transition-all duration-200`}>

@@ -49,11 +49,11 @@ export const LoadingScreen = ( {onComplete, isLoaded} ) => {
         <div className={`fixed inset-0 z-50 bg-black text-gray-100 flex flex-col items-center justify-center transition-all duration-350
         ${fade? "opacity-0 mr-50" : "opacity-100 "}`}>
             <div className="text.center z-10 px-4 " >
-        <h1 className="text-5xl md:text-7xl font-bold bg.white pb-8 flex w-40">
+        <h1 className="text-5xl md:text-7xl font-bold bg.white pb-8 flex w-40 h-25">
             {firstText}
         </h1>
 
-        <p className="text-white-400 text-sm md:text-xl mb-16 max-w-lg mx-auto px-5 w-65">
+        <p className="text-white-400 text-sm md:text-xl mb-16 max-w-lg mx-auto px-5 w-65 h-25">
             {secondText} {thirdText}
         </p>
         </div>

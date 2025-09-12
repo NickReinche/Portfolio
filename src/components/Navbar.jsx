@@ -2,13 +2,19 @@ import { useEffect, useState } from "react"
 
 export const NavBar = ({menuOpen, setMenuOpen}) => {
     let [curScroll, setCurScroll] = useState(0);
+
+    let [navbarToggle, setNavbarToggle] = useState(false);
+
     useEffect(()=> {
         
     const curScrollUpdater = () => {
 
         setCurScroll(window.scrollY);
+        if(window.scrollY < 150)
+            setNavbarToggle(true);
     }
         window.addEventListener("scroll", curScrollUpdater);
+        
         return() => window.removeEventListener("scroll", curScrollUpdater);
     }, [])
     
@@ -22,7 +28,7 @@ export const NavBar = ({menuOpen, setMenuOpen}) => {
 
     
     return <nav className={`fixed top-0 w-full z-40 bg-[rgba(0,0,0,0.9)] blackdrop-blur-lg shadow-lg transition-transform
-    ${curScroll < 150? "-translate-y-16" : "translate-y-0"}`}>
+    ${navbarToggle? "translate-y-0" : "-translate-y-16"}`}>
         <div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-center h-16">
                 <a href="#home" className="font-mono text-l font-bold text-white text-xl"> 
@@ -39,7 +45,7 @@ export const NavBar = ({menuOpen, setMenuOpen}) => {
                     <a href="#about" className="text-gray-300 hover:text-white transtition-colors duration-100">
                         About
                     </a>
-                    <a href="#projects" className="text-gray-300 hover:text-white transtition-colors duration-100">
+                    <a href="#project" className="text-gray-300 hover:text-white transtition-colors duration-100">
                         Projects
                     </a>
                     <a href="#contact" className="text-gray-300 hover:text-white transtition-colors duration-100">

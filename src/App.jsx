@@ -8,6 +8,7 @@ import { Home } from './components/sections/Home';
 import { LoadingScreen } from './components/LoadingScreenName';
 import { About } from './components/sections/About';
 import { Projects } from './components/sections/Projects';
+import { Contact } from './components/sections/Contact';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -21,7 +22,7 @@ function App() {
         } bg-black text-gray-100`}>
           
           <video className="absolute h-full w-full  ml-50" muted autoPlay loop>
-            <source src='/Showreel_New.mp4' type="video/mp4"/>
+            <source src='./Showreel_New.mp4' type="video/mp4"/>
             Video not supported
           </video>
           <div className="absolute h-full w-full bg-gradient-to-r from-[rgba(0,0,0,1)] from-25% via-[rgba(0,0,0,0.8)] via-35% to-[rgba(54,10,54,0)] to-60%"></div>
@@ -32,6 +33,7 @@ function App() {
           <Home/>
           <About/>
           <Projects/>
+          <Contact/>
       </div>
     </>
   )
