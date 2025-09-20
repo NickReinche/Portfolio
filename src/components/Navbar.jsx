@@ -2,15 +2,16 @@ import { useEffect, useState } from "react"
 
 export const NavBar = ({menuOpen, setMenuOpen}) => {
     let [curScroll, setCurScroll] = useState(0);
-
     let [navbarToggle, setNavbarToggle] = useState(false);
+
+    let [initialOverflowIgnore, setinitialOverflowIgnore] = useState(true);
 
     useEffect(()=> {
         
     const curScrollUpdater = () => {
 
         setCurScroll(window.scrollY);
-        if(window.scrollY < 150)
+        if(window.scrollY > 150)
             setNavbarToggle(true);
     }
         window.addEventListener("scroll", curScrollUpdater);
@@ -22,39 +23,41 @@ export const NavBar = ({menuOpen, setMenuOpen}) => {
 
 
     useEffect(() => {
-        document.body.style.overflowY = menuOpen ? "hidden": "";
         document.body.style.overflowX =  "hidden";
+        if(!initialOverflowIgnore)
+        {
+            document.body.style.overflowY = menuOpen ? "hidden": "";
+        }
+        setinitialOverflowIgnore(true);
     }, [menuOpen])
 
     
-    return <nav className={`fixed top-0 w-full z-40 bg-[rgba(0,0,0,0.9)] blackdrop-blur-lg shadow-lg transition-transform
+    return <nav className={`fixed top-0 w-full z-40 bg-custom-black/30 backdrop-blur-lg shadow-lg transition-transform
     ${navbarToggle? "translate-y-0" : "-translate-y-16"}`}>
-        <div className="max-w-7xl mx-auto">
-            <div className="flex justify-between items-center h-16">
-                <a href="#home" className="font-mono text-l font-bold text-white text-xl"> 
-                    Nick Reinche
-                </a>
-                
-                <div className="w-7 h-5 relative cursor-pointer z-40 md:hidden" onClick={() => setMenuOpen((prev) => !prev)}>
-                    &#9776;
-                </div>
-                <div className="hidden md:flex items-center space-x-8">
-                    <a href="#home" className="text-gray-300 hover:text-white transtition-colors duration-100">
-                        Home
-                    </a>
-                    <a href="#about" className="text-gray-300 hover:text-white transtition-colors duration-100">
-                        About
-                    </a>
-                    <a href="#project" className="text-gray-300 hover:text-white transtition-colors duration-100">
-                        Projects
-                    </a>
-                    <a href="#contact" className="text-gray-300 hover:text-white transtition-colors duration-100">
-                        Contact
-                    </a>
-                </div>
+        <div className="flex items-center h-16 w-[100%]">
+            <a href="#home" className="font-bold text-custom-title text-xl pl-20 w-150"> 
+                Nick Reinche
+            </a>
+            <div className="w-[100%]"></div>
 
+            <div className="w-7 h-5 relative cursor-pointer z-40 md:hidden" onClick={() => setMenuOpen((prev) => !prev)}>
+                &#9776;
             </div>
-
+            <div className="hidden md:flex items-center space-x-8 pr-24">
+                <a href="#home" className="text-custom-text hover:text-custom-title transtition-colors duration-100">
+                    Home
+                </a>
+                <a href="#about" className="text-custom-text hover:text-custom-title transtition-colors duration-100">
+                    About
+                </a>
+                <a href="#project" className="text-custom-text hover:text-custom-title transtition-colors duration-100">
+                    Projects
+                </a>
+                <a href="#contact" className="text-custom-text hover:text-custom-title transtition-colors duration-100">
+                    Contact
+                </a>
+            </div>
         </div>
+
     </nav>
 }

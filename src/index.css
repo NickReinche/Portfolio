@@ -3,9 +3,11 @@
 html, body{
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Comic Relief", system-ui;
+  font-weight: 400;
+  font-style: normal;
   background: black;
-  color: aliceblue;
+  color: rgb(189, 204, 216);
 }
 
 
@@ -34,4 +36,16 @@ html, body{
   .animate-loading-bar{
     animation: loading 0.8s ease infinite;
   }
+}
+
+.reveal{
+  opacity: 0;
+  transform: translateY(20);
+
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

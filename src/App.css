@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@theme {
+  --color-custom-cyan-100: #cff1eeff;
+  --color-custom-cyan-200: #74ffeca9;
+  --color-custom-cyan-300: #177979ff;
+  --color-custom-cyan-400: #256b6e33;
+  --color-custom-cyan-500: #0126295b;
+  --color-custom-black: #010303ff;
+  --color-custom-text: #f2ffffff;
+  --color-custom-title: #a8fffbff;
+  --color-custom-link: #55e2dbff;
+  --color-custom-link-hover: #9aece7ff;
+}
