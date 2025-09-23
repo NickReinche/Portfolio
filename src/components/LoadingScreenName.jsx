@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const LoadingScreen = ( {onComplete, isLoaded} ) => {
+export const LoadingScreen = ( {onComplete} ) => {
     const[firstText, setFirstText] = useState("");
     const[secondText, setSecondText] = useState("");
     const[thirdText, setThirdText] = useState("");

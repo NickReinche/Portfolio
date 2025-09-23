@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import './App.css'
 import "./index.css"
+import { useEffect, useState } from 'react';
 
 import { NavBar } from './components/Navbar';
 import { MobileMenu } from './components/MobileMenu';
@@ -11,15 +11,23 @@ import { Projects } from './components/sections/Projects';
 import { Contact } from './components/sections/Contact';
 import { ScrollBlur } from './components/ScrollBlur';
 
-
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  return (
-    <>
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [fadeDuration, setfadeDuration] = useState("duration-700");
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    useEffect(() =>{
+        if(isLoaded) return;
+        let params = (new URL(document.location)).searchParams;
+        setIsLoaded(params.get("IsLoaded")); 
+        setfadeDuration("duration-0");
+        document.body.style.overflowY = "";
+    })
+
+    return <>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)}/>}
 
-      <div className={`min-h-screen transition-all duration-700  ${
+      <div className={`min-h-screen transition-all ${fadeDuration}  ${
         isLoaded? "opacity-100" : "opacity-0"
         } bg-custom-black text-gray-100`}>
         
@@ -33,21 +41,15 @@ function App() {
           <div className={`absolute h-full w-full`}></div>
           </ScrollBlur>
           <Home/>
-          
-
-         
 
           <NavBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-
-          
 
           <About/>
           <Projects/>
           <Contact/>
       </div>
     </>
-  )
 }
 
 export default App
