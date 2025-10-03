@@ -10,7 +10,6 @@ import { About } from './components/sections/About';
 import { Projects } from './components/sections/Projects';
 import { Contact } from './components/sections/Contact';
 import { ScrollBlur } from './components/ScrollBlur';
-
 function App() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [fadeDuration, setfadeDuration] = useState("duration-700");
@@ -19,6 +18,8 @@ function App() {
     useEffect(() =>{
         if(isLoaded) return;
         let params = (new URL(document.location)).searchParams;
+        console.log(params.get("IsLoaded"));
+        if(params.get("IsLoaded") == null) return;
         setIsLoaded(params.get("IsLoaded")); 
         setfadeDuration("duration-0");
         document.body.style.overflowY = "";

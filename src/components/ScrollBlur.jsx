@@ -26,8 +26,7 @@ export const ScrollBlur = ({children}) => {
     });
 
     return <div >
-        <div ref={ref} className={blurAmount + " absolute w-[100%] h-[125%] -my-[6%] transition-all duration-500 allign-self-center justify-self-center z-1 pointer-events-none"}></div>
+        <div ref={ref} className={blurAmount + " absolute w-[100%] h-[125%] -my-[6%] transition-all duration-500 allign-self-center justify-self-center z-2 pointer-events-none"}></div>
         {children}
-        
     </div>
 }

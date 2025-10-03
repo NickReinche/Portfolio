@@ -23,14 +23,12 @@ export function AllProjects ({GetBorderStyle, GetBorderHover, selectedGame, setS
                 <source src="./Convergence.mp4" type="video/mp4"/>
             </video>
             
-            <div className="absolute min-h-screen min-w-screen bg-linear-to-tl from-custom-black/70 from-25% to-[0,0,0,0] to-35%"></div>
-            <div className="absolute min-h-screen min-w-screen bg-linear-to-r from-custom-black from-25% to-[0,0,0,0] to-30%"></div>
     
             <ScrollBlur className="absolute z-0">
-                <div className={`absolute h-full w-full`}></div>
+                <div className="absolute min-h-screen min-w-screen bg-linear-to-r from-custom-black from-25% to-[0,0,0,0] to-30%"></div>    
             </ScrollBlur>
-
-            <div className="absolute right-10 bottom-10 z-10 pb-10">
+            <div className="absolute min-h-screen min-w-screen bg-linear-to-tl from-custom-black/80 from-15% to-[0,0,0,0] to-30% z-10 pointer-events-none"></div>    
+            <div className="absolute right-10 pb-10 z-100 w-100 h-50 flex items-end justify-center h-full">
                 <img src={`
                     ${
                         selectedGame == 0? './WhimsicalLogo.png':
@@ -40,9 +38,9 @@ export function AllProjects ({GetBorderStyle, GetBorderHover, selectedGame, setS
                         selectedGame == 4? './ConvergenceLogo.png': ''
                     }
                     `}
-                    className="xl:max-w-120 md:max-w-80 sm:max-w-40 max-h-50"></img>
+                    className=""></img>
             </div>
-            
+
             <div className="absolute pt-20 pl-20 xl:pt-30 lg:pt-14 z-10 h-screen min-w-screen">
                 <div className="xl:text-4xl lg:text-2xl font-bold mb-12 text-start text-custom-title font-bold">
                     Games i've made
@@ -72,7 +70,7 @@ export function AllProjects ({GetBorderStyle, GetBorderHover, selectedGame, setS
                             }
                         
                         <p className="text-sm text-custom-link hover:text-custom-link-hover text-right font-bold">
-                            <button  onClick={() => setSelectedGameDetails("Whimsical")}> 
+                            <button  onClick={() => setSelectedGameDetails("Whimsical")} className="cursor-pointer"> 
                                 View Details 
                             </button>
                         </p>
@@ -99,7 +97,7 @@ export function AllProjects ({GetBorderStyle, GetBorderHover, selectedGame, setS
                                 ))
                             }
                         <p className="text-sm text-custom-link hover:text-custom-link-hover text-right font-bold">
-                            <button onClick={() => setSelectedGameDetails("Cassandra")} target="_blank"> 
+                            <button onClick={() => setSelectedGameDetails("Cassandra")} className="cursor-pointer"> 
                                 View Details 
                             </button>
                         </p>
@@ -127,9 +125,9 @@ export function AllProjects ({GetBorderStyle, GetBorderHover, selectedGame, setS
                                 ))
                             }
                             <p className="text-sm text-custom-link hover:text-custom-link-hover text-right font-bold">
-                            <a href="https://apfei.itch.io/fail-safe" target="_blank"> 
-                                View Details 
-                            </a>
+                                <button  onClick={() => setSelectedGameDetails("FailSafe")} className="cursor-pointer"> 
+                                    View Details 
+                                </button>
                             </p>
                         </div>
 
@@ -155,9 +153,9 @@ export function AllProjects ({GetBorderStyle, GetBorderHover, selectedGame, setS
                                 ))
                             }
                             <p className="text-sm text-custom-link hover:text-custom-link-hover text-right font-bold">
-                                <a href="https://apfei.itch.io/owl-one-wave-length" target="_blank"> 
-                                    View Details 
-                                </a>
+                                <button  onClick={() => setSelectedGameDetails("OWL")} className="cursor-pointer"> 
+                                View Details 
+                                </button>   
                             </p>
 
                         </div>
@@ -183,9 +181,9 @@ export function AllProjects ({GetBorderStyle, GetBorderHover, selectedGame, setS
                                 ))
                             }
                             <p className="text-sm text-custom-link hover:text-custom-link-hover text-right font-bold"> 
-                            <a href="https://apfei.itch.io/convergence" target="_blank"> 
+                                <button  onClick={() => setSelectedGameDetails("Convergence")} className="cursor-pointer"> 
                                 View Details 
-                            </a>
+                                </button>   
                             </p>
                         </div>
                             

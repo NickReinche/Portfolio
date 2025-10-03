@@ -1,6 +1,6 @@
 export const Home = () => {
     return <section id="home" className="min-h-screen flex items-center justify-start ml-20 ">
-        <div className="text.center z-10 " >
+        <div className="z-10 " >
             <h1 className="text-5xl md:text-7xl font-bold text-custom-title pb-8 flex -ml-1">
                 Hey!
             </h1>

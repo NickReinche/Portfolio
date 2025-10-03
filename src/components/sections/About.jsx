@@ -10,6 +10,7 @@ export const About = () => {
         "Reaper",
         "FMOD",
         "Inky",
+        "Github"
 
     ];
     const LearnedStuffList = [
@@ -50,7 +51,7 @@ export const About = () => {
             </p>
 
             <p className="text-custom-text mb-6">
-                I really enjoy playing challenging games like Elden Ring, Darkest Dungeon and currently Silksong. Also, all Coop games and Friend Slop games are great! That's probably where all my inspiration comes from.
+                I really enjoy playing challenging games like Elden Ring, Darkest Dungeon and Silksong. Also, all Coop games and Friend Slop games are great! That's probably where all my inspiration comes from.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
