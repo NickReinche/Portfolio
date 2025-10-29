@@ -22,7 +22,7 @@ export const CassandraMovementImprovements = () => {
         
         <div className="w-2/5">
              <video className={`object-cover transition-all duration-200 border border-white border-2`} controls loop>
-                <source src="./Cassandra/Cassandra_Mechanics.mp4" type="video/mp4"/>
+                <source src="./Cassandra/Cassandra_Mechanics_Tech.mp4" type="video/mp4"/>
             </video>
          
         </div>

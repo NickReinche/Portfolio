@@ -29,7 +29,7 @@ export function Whimsical ({GetProjectCategories, GetPage, GetBackground}) {
             "Corridors",
             "Drawing System",
             "Multiplayer"
-            ], 0)}
+            ], 0, "https://store.steampowered.com/app/3604800/Whimsical_Artefacts")}
         
         <div className="2xl:mt-70 xl:mt-30 mr-28 w-[100%] max-h-screen z-10">
             {GetPage([<WhimsicalGeneral/>, <WhimsicalLevelGeneration/>, <WhimsicalCorridor/>, <WhimsicalDrawingSystem/>, <WhimsicalMultiplayer/>])}

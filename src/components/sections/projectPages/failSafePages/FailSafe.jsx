@@ -26,7 +26,7 @@ export function FailSafe ({GetProjectCategories, GetPage, GetBackground}) {
             "C++",
             "Procedual Mesh",
             "Color Grading"
-            ], 2)}
+            ], 2, "https://apfei.itch.io/fail-safe")}
         
         <div className="2xl:mt-70 xl:mt-30 mr-28 w-[100%] max-h-screen z-10">
             {GetPage([<FailSafeGeneral/>, <FailSafeCpp/>, <FailSafeProcedualMesh/>, <FailSafeColorGrading/>])}

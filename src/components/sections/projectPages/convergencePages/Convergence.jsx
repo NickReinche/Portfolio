@@ -26,7 +26,7 @@ export function Convergence ({GetProjectCategories, GetPage, GetBackground}) {
             "Postprocess",
             "Vertex Painting",
             "Some PCG"
-            ], 4)}
+            ], 4, "https://apfei.itch.io/convergence")}
         
         <div className="2xl:mt-70 xl:mt-30 mr-28 w-[100%] max-h-screen z-10">
             {GetPage([<ConvergenceGeneral/>, <ConvergencePostProcess/>, <ConvergenceVertex/>, <ConvergencePCG/>])}

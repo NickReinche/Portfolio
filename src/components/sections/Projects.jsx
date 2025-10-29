@@ -98,7 +98,7 @@ export const Projects = () => {
     }
 
 
-    function GetProjectCategories(categories, gameIndex){
+    function GetProjectCategories(categories, gameIndex, gameLink){
         return <div className="m-10 ml-20 mt-18 w-200 z-10 flex flex-col">
              <div className="mb-10 min-h-40">
                 <img src={`
@@ -124,7 +124,13 @@ export const Projects = () => {
                 </div>
                 
                 <div className="grow"></div>
-                
+
+                <a className="cursor-pointer p-4 pb-0 text-custom-link hover:text-custom-link-hover" href={gameLink} target="_blank">
+                    <h3 className="text-md font-bold">
+                        Open Game Page
+                    </h3>
+                </a>
+
                 <button className="p-4 self-start cursor-pointer text-custom-link hover:text-custom-link-hover" onClick={() => {setSelectedGameDetails("")}}> 
                     Back
                 </button>

@@ -7,8 +7,8 @@ export const FailSafeCpp = () => {
 
             <p className="pb-4 font-bold text-custom-title"> Conclusion </p>
 
-            <p className="mb-2 text-custom-text"> C++ is really cool, especially if something has to be performant, but to develop and iterate something that's completely coded in C++ is terribly slow, especially compared to Blueprints.</p>
-            <p className="mb-2 text-custom-text"> So; Full C++ project nope, custom c++ nodes YES</p>
+            <p className="mb-2 text-custom-text"> C++ is really cool, especially if something has to be performant or for something complicated, but to develop and iterate something that's completely coded in C++ is terribly slow, especially compared to Blueprints.</p>
+            <p className="mb-2 text-custom-text"> So as a solo dev; Full C++ project nope, custom c++ nodes YES</p>
             
         </div>
         

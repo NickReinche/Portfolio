@@ -26,7 +26,9 @@ export function Cassandra ({GetProjectCategories, GetPage, GetBackground}) {
             "Movement",
             "Reactive Foliage",
             "Movement Improvements"
-            ], 1)}
+            ], 
+            1,
+            "https://apfei.itch.io/cassandra-flame-of-faith")}
         
         <div className="2xl:mt-70 xl:mt-30 mr-28 w-[100%] max-h-screen z-10">
             {GetPage([<CassandraGeneral/>, <CassandraMovement/>, <CassandraReactiveFoliage/>, <CassandraMovementImprovements/>])}

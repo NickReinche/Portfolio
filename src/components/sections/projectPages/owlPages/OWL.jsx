@@ -24,7 +24,7 @@ export function OWL ({GetProjectCategories, GetPage, GetBackground}) {
             ["General", 
             "Multiplayer",
             "LVLs"
-            ], 3)}
+            ], 3, "https://store.steampowered.com/app/3416680/OWL__One_Wave_Length")}
         
         <div className="2xl:mt-70 xl:mt-30 mr-28 w-[100%] max-h-screen z-10">
             {GetPage([<OWLGeneral/>, <OWLMultiplayer/>, <OWLLVL/>])}
