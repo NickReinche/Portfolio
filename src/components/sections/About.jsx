@@ -34,7 +34,7 @@ export const About = () => {
 
             <div className="rounded-xl p-8 transition-all text-lg">
             <p className="text-custom-text mb-3">
-                I've been a game developer for around 5 yeas now and I love 
+                I've been a game developer for around 6 years now and I love 
                 <span className="font-bold text-custom-title"> Technical stuff</span> 
                 . I enjoy developing every type of genre, 
                 creating unique gameplay that is fun to play and just feels nice.
